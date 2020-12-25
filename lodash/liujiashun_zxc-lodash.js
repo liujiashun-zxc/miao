@@ -1,20 +1,15 @@
-var liujiashun_zxc = {
-  chunk: function(array, size) {
-  
-  },
-  compact: function(array) {
-    
-  },
-  concat : function (arr,arg){
-  let result = arr
-    for (let item of arg) {
-      if (Array.isArray(item)) {
-        result.push(subitem)
-      }
-      else {
-        retult.push(item)
-      }
-      return retult
-    }
-
-}
+    function chunk(array, size) { 
+      size = Math.max(size, 0) 
+      const length = array == null ? 0 : array.length 
+      if (!length || size < 1) {
+         return [] 
+        } 
+      let index = 0 
+      let resIndex = 0 
+      const result = new Array(Math.ceil(length / size))
+       while (index < length) {
+          result[resIndex++] = slice(array, index, (index += size))
+         } 
+         return result 
+        },
+          
