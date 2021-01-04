@@ -19,4 +19,12 @@ function chunk(ary, size = 1) {
     }
     return result
 }
-          
+function compact(ary) {
+    var result = []
+    for (i = 0; i < ary.length; i++) {
+        if (ary[i]) {
+            result.push(ary[i])
+        }
+    }
+    return result
+}
